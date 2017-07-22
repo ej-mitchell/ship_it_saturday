@@ -1,9 +1,10 @@
-<h1>Welcome to our site!</h1>
-<h2>Discussion Topics</h2>
+<h2>Forum Topics</h2>
 
 <% @topics.each do |topic| %>
-<div>
-  <h3><%= link_to topic.name, topic_posts_path(topic.id) %></h3>
-  <p><%= topic.description %></p>
-</div>
+  <a href=<%= topic_posts_path(topic.id) %>>
+    <div class="callout">
+      <h3><%= topic.name %></h3>
+      <p><%= topic.description %></p>
+    </div>
+  </a>
 <% end %>
