@@ -1,13 +1,29 @@
-// body {
-//   background-color: #D6E5E3;
-// }
+body {
+  background-color: #FFFFF3;
+}
 
 .top-bar {
-  background-color: #E6E6E6;
+  background-color: #928C6F;
+}
+
+ul.menu {
+    background-color: #928C6F;
 }
 
 .index-image {
   margin: auto;
   display: block;
   width: 95%;
+}
+
+.card-divider {
+  background-color: #D1EFB5;
+}
+
+a {
+  color: black;
+}
+
+.mint {
+  background-color: #D1EFB5;
 }
