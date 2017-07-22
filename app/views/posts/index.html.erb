@@ -1,3 +1,19 @@
+
+<h1 class="text-center"><%= @topic.name %></h1>
+<h5 class="text-center"><%= @topic.description %></h5>
+
+<div class="row">
+  <div class="column small-12">
+    <% @posts.each do |post| %>
+      <a href=<%= post_path(post.id) %>>
+        <div class="callout">
+          <h4><%= post.title %></h4>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</div>
+
 <h1>Posts for <%= @topic.name %></h1>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post_path(post.id) %></h2>
