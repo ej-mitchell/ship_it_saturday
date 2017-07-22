@@ -5,6 +5,7 @@
     <p><%= @post.body %></p>
     <%= link_to "Back to #{@post.topic.name}", topic_posts_path(@post.topic) %>
 
+  <div class="callout mint">
     <% @comments.each do |comment| %>
       <div class="callout">
         <p>Comment By: <%= comment.username %> on <%= comment.created_at.strftime("%b. %d, %Y") %></p>
@@ -16,5 +17,6 @@
       <h4>Add a comment</h4>
       <%= render "comments/form" %>
     </div>
+  </div>
   </div>
 </div>
