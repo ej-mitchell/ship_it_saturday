@@ -1,8 +1,10 @@
-<h1 class="text-center"><%= @topic.name %></h1>
-<h5 class="text-center"><%= @topic.description %></h5>
 
 <div class="row">
   <div class="column small-12">
+
+  <h1 class="text-center"><%= @topic.name %></h1>
+  <h5 class="text-center"><%= @topic.description %></h5>
+
     <% @posts.each do |post| %>
       <a href=<%= post_path(post.id) %>>
         <div class="callout">
@@ -10,5 +12,10 @@
         </div>
       </a>
     <% end %>
+
+    <div class="callout form">
+      <h4>Add a new post</h4>
+      <%= render 'form' %>
+    </div>
   </div>
 </div>
