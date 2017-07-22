@@ -1,0 +1,4 @@
+<h1>Posts for <%= @topic.name %></h1>
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, post_path(post.id) %></h2>
+<% end %>
