@@ -6,7 +6,7 @@
   <% @topics.each do |topic| %>
 
   <div class="medium-4 columns">
-    <div class="card">
+
       <a href=<%= topic_posts_path(topic.id) %>>
         <div class="callout">
           <div class="card-divider">
@@ -17,7 +17,7 @@
           </div>
         </div>
       </a>
-    </div>
+
   </div>
 
   <% end %>
