@@ -1,3 +1,4 @@
+
 <h1 class="text-center"><%= @topic.name %></h1>
 <h5 class="text-center"><%= @topic.description %></h5>
 
@@ -12,3 +13,9 @@
     <% end %>
   </div>
 </div>
+
+<h1>Posts for <%= @topic.name %></h1>
+<% @posts.each do |post| %>
+  <h2><%= link_to post.title, post_path(post.id) %></h2>
+<% end %>
+<%= render 'form' %>
