@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
@@ -24,7 +25,15 @@
         </ul>
       </div>
     </div>
-
+    
+    <% if flash.any? %>
+      <div class="flash">
+        <div class="container">
+          <%= flash[:notice] %>
+        </div>
+      </div>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
