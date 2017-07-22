@@ -6,9 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/css/foundation.min.css">
   </head>
 
   <body>
+    
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">A Forum for Women in Tech</li>
+        </ul>
+      </div>
+
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><%= link_to "All Topics", topics_path %></li>
+        </ul>
+      </div>
+    </div>
+    
     <% if flash.any? %>
       <div class="flash">
         <div class="container">
@@ -16,6 +33,7 @@
         </div>
       </div>
     <% end %>
+    
     <%= yield %>
   </body>
 </html>

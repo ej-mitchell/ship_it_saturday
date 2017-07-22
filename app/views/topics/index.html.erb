@@ -1,9 +1,24 @@
-<h1>Welcome to our site!</h1>
-<h2>Discussion Topics</h2>
+<h2 class="text-center">Forum Topics</h2>
 
-<% @topics.each do |topic| %>
-<div>
-  <h3><%= link_to topic.name, topic_posts_path(topic.id) %></h3>
-  <p><%= topic.description %></p>
+<div class="row small-up-2 medium-up-3">
+
+  <% @topics.each do |topic| %>
+
+  <div class="medium-4 columns">
+    <div class="card">
+      <a href=<%= topic_posts_path(topic.id) %>>
+        <div class="callout">
+          <div class="card-divider">
+            <h3><%= topic.name %></h3>
+          </div>
+          <div class="card-section">
+            <p><%= topic.description %></p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <% end %>
+
 </div>
-<% end %>
