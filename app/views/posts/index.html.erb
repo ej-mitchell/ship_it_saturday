@@ -2,20 +2,22 @@
 <div class="row">
   <div class="column small-12">
 
-  <h1 class="text-center"><%= @topic.name %></h1>
-  <h5 class="text-center"><%= @topic.description %></h5>
+    <h1 class="text-center"><%= @topic.name %></h1>
+    <h5 class="text-center"><%= @topic.description %></h5>
+    <div class="callout mint">
 
-    <% @posts.each do |post| %>
-      <a href=<%= post_path(post.id) %>>
-        <div class="callout">
-          <h4><%= post.title %></h4>
-        </div>
-      </a>
-    <% end %>
+      <% @posts.each do |post| %>
+        <a href=<%= post_path(post.id) %>>
+          <div class="callout">
+            <h4><%= post.title %></h4>
+          </div>
+        </a>
+      <% end %>
 
-    <div class="callout form">
-      <h4>Add a new post</h4>
-      <%= render 'form' %>
+      <div class="callout form">
+        <h4>Add a new post</h4>
+        <%= render 'form' %>
+      </div>
     </div>
   </div>
 </div>

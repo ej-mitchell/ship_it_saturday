@@ -1,3 +1,4 @@
+<div><img class="index-image" src="office-desktop.jpg"></div>
 <h2 class="text-center">Forum Topics</h2>
 
 <div class="row small-up-2 medium-up-3">
@@ -5,7 +6,7 @@
   <% @topics.each do |topic| %>
 
   <div class="medium-4 columns">
-    <div class="card">
+
       <a href=<%= topic_posts_path(topic.id) %>>
         <div class="callout">
           <div class="card-divider">
@@ -16,7 +17,7 @@
           </div>
         </div>
       </a>
-    </div>
+
   </div>
 
   <% end %>
